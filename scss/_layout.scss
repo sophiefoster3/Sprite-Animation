@@ -1,0 +1,42 @@
+.site {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: .25fr, .5fr, .5fr, .25fr;
+	grid-template-areas: 
+	"title title"
+	"main main"
+	"main main"
+	"foot foot";
+}
+
+@media screen and (min-width: 1200px) {
+	.site {
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		grid-template-areas: 
+		"title title title title"
+	    "main main main main"
+	    "foot foot foot foot";
+	}
+	nav a {
+		display: block;
+	}
+}
+
+.page-title {
+	grid-area: title;
+	text-align: center;
+}
+
+.footer-content {
+	grid-area: foot;
+}
+
+.nav {
+	grid-area: nav;
+}
+
+
+.main-content {
+	grid-area: main;
+}

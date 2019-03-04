@@ -1,0 +1,34 @@
+$icon-layout:horizontal;
+@import 'icon/*.png';
+@include all-icon-sprites;
+
+.sophie {
+	width:256px;
+	height:171px;
+	background: url("../img/icon-s0e047cbbae.png") left center;
+	animation: play 2.5s steps(15) infinite;
+}
+
+@keyframes play {
+	100% {
+		background-position: -3840px;
+	}
+}
+body {
+	background-color: $newcolor;
+	font-family: $basefont;
+}
+
+a {
+	padding: 1em;
+}
+
+.nav {
+	text-align: center;
+	@include box;
+}
+
+div {
+	display: block;
+	margin: 0 auto;
+}
